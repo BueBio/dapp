@@ -1,0 +1,75 @@
+image: docker:latest
+
+variables:
+  PIPELINE_IMAGE: $CI_REGISTRY_IMAGE:testci$CI_PIPELINE_ID
+  PIPELINE_BUILDER_IMAGE: $CI_REGISTRY_IMAGE:testci-builder$CI_PIPELINE_ID
+  PROD_IMAGE: $CI_REGISTRY_IMAGE:master
+  PROD_BUILDER_IMAGE: $CI_REGISTRY_IMAGE:master-builder
+  DEV_IMAGE: $CI_REGISTRY_IMAGE:dev
+  DEV_BUILDER_IMAGE: $CI_REGISTRY_IMAGE:dev-builder
+
+stages:
+  - test
+  - build
+  - deploy
+
+test_eslint:
+  image: node:14.17
+  stage: test
+  before_script:
+    - npm install
+  script:
+    - npm run test-lint
+
+build:
+  stage: build
+  services:
+    - docker:dind
+  except:
+    - dev
+    - main
+  script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+    - docker pull $DEV_BUILDER_IMAGE || true
+    - docker build --target builder --cache-from=$DEV_BUILDER_IMAGE --build-arg env_conf="dev" -t $PIPELINE_BUILDER_IMAGE .
+    - docker pull $PROD_BUILDER_IMAGE || true
+    - docker build --target builder --cache-from=$PROD_BUILDER_IMAGE --build-arg env_conf="prod" -t $PIPELINE_BUILDER_IMAGE .
+    - docker build --target runner --cache-from=$PIPELINE_BUILDER_IMAGE --build-arg env_conf="prod" -t $PIPELINE_IMAGE .
+
+build_release_dev:
+  stage: build
+  services:
+    - docker:dind
+  only:
+    - dev
+  script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+    - docker pull $DEV_BUILDER_IMAGE || true
+    - docker build --target builder --cache-from=$DEV_BUILDER_IMAGE --build-arg env_conf="dev" -t $DEV_BUILDER_IMAGE .
+    - docker build --target runner --cache-from=$DEV_BUILDER_IMAGE --build-arg env_conf="dev" -t $DEV_IMAGE .
+    - docker push $DEV_BUILDER_IMAGE
+    - docker push $DEV_IMAGE
+
+build_release_prod:
+  stage: build
+  services:
+    - docker:dind
+  only:
+    - main
+  script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+    - docker pull $PROD_BUILDER_IMAGE || true
+    - docker build --target builder --cache-from=$PROD_BUILDER_IMAGE --build-arg env_conf="prod" -t $PROD_BUILDER_IMAGE .
+    - docker build --target runner --cache-from=$PROD_BUILDER_IMAGE --build-arg env_conf="prod" -t $PROD_IMAGE .
+    - docker push $PROD_BUILDER_IMAGE
+    - docker push $PROD_IMAGE
+
+deploy_dev:
+  stage: deploy
+  services:
+    - docker:dind
+  only:
+    - dev
+  script:
+    - apk add --update curl curl-dev
+    - curl -X POST -F token=$DEPLOY_TRIGGER_TOKEN -F ref=dev https://git.grava.digital/api/v4/projects/834/trigger/pipeline

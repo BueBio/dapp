@@ -1,0 +1,36 @@
+.menu {
+  grid-area: nav;
+  padding: 0.25rem;
+}
+
+.titulo{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5rem;
+}
+
+ul{
+  width: 0%;
+  margin-left: 10rem;
+  margin-top: 3rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+li{
+  font-family: var(--font);
+  font-weight: 700;
+  color: var(--second-text-color);
+}
+
+a{
+  text-decoration: none;
+  color: var(--second-text-color);
+}
+
+a:hover{
+  color: var(--highlight-color);
+  cursor: pointer;
+}

@@ -1,0 +1,35 @@
+.box {
+  display: grid;
+  justify-content: center;
+  width: 90%;
+  height: 55%;
+  margin: 0 auto;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 3.5fr 5fr;
+  gap: 3rem 6rem;
+}
+
+.resources {
+  grid-column: 1/3;
+  background-color: #ffffff;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  .info-item {
+    flex-basis: 40%;
+  }
+}
+
+.resource-items {
+  display: flex;
+  justify-content: space-around;
+  gap: 4rem;
+
+  .info-item {
+    flex-basis: 20%;
+  }
+}

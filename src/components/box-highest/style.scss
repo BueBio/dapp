@@ -1,0 +1,22 @@
+.box-highest {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-basis: 350px;
+  height: 95px;
+  background-color: var(--background-color);
+
+  img.icon {
+    width: 3rem;
+  }
+
+  .btn-text {
+    font-family: var(--font);
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+
+  .flecha{
+    margin-bottom: 2.5rem;
+  }
+}
