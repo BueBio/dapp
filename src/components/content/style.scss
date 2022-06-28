@@ -4,11 +4,19 @@
 @import '../../pages/nfts/style.scss';
 
 .content {
-  padding: 0.25rem;
+  padding: 4rem;
 }
 
 title {
   color: #1f2128;
+}
+
+@media (max-width: 992px){
+
+  .content{
+    padding: 1rem;
+  }
+
 }
 
 

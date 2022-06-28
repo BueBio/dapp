@@ -1,5 +1,5 @@
 import { Contract, providers } from 'ethers';
-import erc721 from './abi.json';
+import erc721 from './erc721-abi.json';
 
 export default function checkIfHaveNft(userAddress, nftAddress, provider) {
   const providerContract = new providers.Web3Provider(provider);

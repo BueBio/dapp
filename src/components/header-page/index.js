@@ -17,7 +17,7 @@ export default function HeaderPage({ title }) {
               type: 'setDataGeneral',
               value: {
                 disconnect,
-                address,
+                address: address.toLowerCase(),
                 provider,
               },
             });
@@ -27,11 +27,11 @@ export default function HeaderPage({ title }) {
 
   const showWalletInfo = () => rloginState.rlogin.showWalletInfo();
 
-  const networkName = rloginState.networkId && <button type="button">{getNetworkName(rloginState.networkId)}</button>;
+  const networkName = rloginState.networkId && <button type="button" className="btn-principal">{getNetworkName(rloginState.networkId)}</button>;
 
-  const elementAddress = rloginState.address && <button type="button" onClick={showWalletInfo}>{rloginState.address}</button>;
+  const elementAddress = rloginState.address && <button type="button" className="btn-principal" onClick={showWalletInfo}>{rloginState.address}</button>;
 
-  const loginBtn = !rloginState.address && <button type="button" onClick={login}>Login</button>;
+  const loginBtn = !rloginState.address && <button type="button" className="btn-principal" onClick={login}>Connect</button>;
 
   return (
     <div className="header">

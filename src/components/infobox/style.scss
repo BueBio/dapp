@@ -1,0 +1,27 @@
+.content-info{
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: var(--info-box);
+
+  h3{
+    margin: 0 ;
+    margin-bottom: 2rem;
+  }
+
+  p{
+    font-weight: initial;
+  }
+
+}
+
+
+@media (max-width: 992px) {
+  .content-info{
+   padding: 1rem;
+
+    h3{
+      margin: 0;
+    }
+
+  }
+}

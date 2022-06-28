@@ -2,12 +2,8 @@
  display: flex;
  justify-content: space-between;
  align-items: center;
- width: 90%;
- height: 75px;
- margin: 0 auto;
- margin-top: 3.5rem;
  margin-bottom: 2rem;
- background-color: #ffffff;
+ background-color: var(--div-color);
 
 }
 
@@ -49,4 +45,22 @@ button{
   &:active {
     transform: scale(0.98);
   }
+}
+
+
+
+@media (max-width: 992px){
+  .header{
+    background: var(--bacground-color);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+    h2{
+      margin: 0px;
+      font-size: 20px;
+    }
+  }
+    .buttons{
+      display: none;
+    }
 }

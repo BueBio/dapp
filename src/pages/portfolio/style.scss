@@ -1,9 +1,6 @@
 .box {
   display: grid;
   justify-content: center;
-  width: 90%;
-  height: 55%;
-  margin: 0 auto;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: 3.5fr 5fr;
   gap: 3rem 6rem;
@@ -31,5 +28,34 @@
 
   .info-item {
     flex-basis: 20%;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .box{
+    display: grid;
+    grid-template-rows: 250px;
+    gap: 2rem;
+  }
+
+  .resource-items{
+    flex-direction: column;
+    gap: 0px;
+
+  }
+
+  .info-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .info-items{
+    flex-direction:column;
+  }
+
+  .content-box{
+    grid-column: 1/3;
   }
 }

@@ -1,0 +1,11 @@
+.linea{
+  display: none;
+}
+
+@media(max-width:992px){
+
+  .linea{
+    display: block;
+    margin-bottom: 10px;
+  }
+}

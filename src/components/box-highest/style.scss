@@ -20,3 +20,15 @@
     margin-bottom: 2.5rem;
   }
 }
+
+
+@media(max-width: 992px){
+  .box-highest{
+    flex-basis: 30px;
+  }
+
+  .flecha{
+    width: 25px;
+    margin-top: 2rem;
+  }
+}

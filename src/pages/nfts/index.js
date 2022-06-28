@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Content from '../../components/content';
-import checkIfHaveNft from '../../utils/blockchain-helper';
+import checkIfHaveNft from '../../utils/erc721-helper';
 import { useRLogin } from '../../context';
 import getNfts from '../../services/nfts';
 import BoxHighest from '../../components/box-highest';
 import NftsTable from '../../components/nfts-table';
 import urlFromImage from '../../services/images';
+import InfoBox from '../../components/infobox';
 
 function filterNfts(nfts, rlogin) {
   const promisesChecked = nfts.map((nft) => {
@@ -47,7 +48,7 @@ export default function Nfts() {
           setOwnNfts(nftsFiltered);
         });
     }
-  }, [rloginState.address]);
+  }, [rloginState.address, nfts]);
 
   const elementsVaults = (!ownNfts || ownNfts.length === 0) ? "You don't have nfts"
     : ownNfts.map((nft) => {
@@ -63,6 +64,16 @@ export default function Nfts() {
 
   return (
     <Content title="NFTS">
+      <InfoBox title="Do more with your NFTs">
+        <p>
+          To participate in most of our pools, you need to manage certain NFTs as membership.
+          It´s important to understand that you can own or rent anytime you want.
+        </p>
+        <p>
+          The NFTs will remain always in your wallet, the only thing that
+          vaults do if to verify access.
+        </p>
+      </InfoBox>
       <div className="nft-box">
         <div className="content-box with-margin">
           <h3>My Active NFTs</h3>

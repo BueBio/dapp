@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import urlFromImage from '../../services/images';
 import './style.scss';
 
@@ -6,6 +7,7 @@ export default function Strategies({ vaults }) {
   const elements = vaults.map((vault) => (
     <tr key={vault._id}>
       <td>
+        <div className="linea"> </div>
         <div className="column-image">
           {vault.image && (
             <img src={urlFromImage(vault.image)} alt={vault.name} />
@@ -13,14 +15,14 @@ export default function Strategies({ vaults }) {
           <span>{vault.name}</span>
         </div>
       </td>
-      <td>-</td>
-      <td>
+      <td data-title="Scoring">-</td>
+      <td data-title="APY">
         {`${vault.apy}%`}
       </td>
-      <td> - </td>
+      <td data-title="Total-Assets"> - </td>
+      <td data-title="Avaliable to deposit"> - </td>
       <td>
-        -
-        <button type="button" className="column-button">Deposit</button>
+        <Link className="column-button btn-principal" to={`/vaults/${vault._id}`}>Deposit</Link>
       </td>
     </tr>
   ));
@@ -53,7 +55,7 @@ export default function Strategies({ vaults }) {
             </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="tbody">
           {elements}
         </tbody>
       </table>

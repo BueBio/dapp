@@ -1,4 +1,4 @@
-# BueBio - Dapp
+# NFTV - Dapp
 
 ## Requirements
 - Node >= 12
