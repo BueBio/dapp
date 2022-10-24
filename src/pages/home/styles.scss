@@ -1,0 +1,357 @@
+.home-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h2, h4 {
+        margin: 14rem 0rem 0rem 5rem;
+        font-size: 4rem;
+    }
+
+    h4 {
+        margin: 4rem 0rem 0rem 5rem;
+        font-size: 2rem;
+    }
+
+    span {
+        background: rgba(0, 210, 128, 0.22);
+    }
+
+    button {
+        margin: 10rem 0rem 0rem 5rem;
+        margin-top: 3rem;
+        width: 10%;
+    }
+
+}
+
+.explanation-of-tokens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .sign-responsible-consumer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 20px 20px 30px rgba(13, 33, 49, 0.05);
+        border-radius: 14px;
+        margin-top: 5.5rem;
+        padding: 5rem;
+        width: 70%; 
+
+        .button-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 0rem 10rem;
+            button {
+                width: 20%;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                width: 20%;
+            }
+        }
+    }
+
+    h3 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 42px;
+        text-align: center;
+        color: #323641;
+    }
+
+    p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 40px;
+        color: #8b91a1;
+        margin-top: -1rem;
+    }
+
+    span {
+        color: #069476;
+    }
+    .page-container {
+    height: 100%;
+    .home-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        h2 {
+            margin: 10rem 0rem 0rem 5rem;
+            font-size: 4rem;
+        }
+
+        span {
+            background: rgba(0, 210, 128, 0.22);
+        }
+
+        button {
+            margin: 10rem 0rem 0rem 5rem;
+            margin-top: 3rem;
+            width: 10%;
+        }
+
+    }
+
+    .explanation-of-tokens {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 8rem;
+    }
+}}
+
+.home-background {
+    background-image: url(../../assets/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100rem;
+    margin-top: -5rem;
+
+}
+.marketplace-token-container {
+    margin-top: -34rem;
+    h2 {
+        font-size: 34px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        line-height: 41px;
+    }
+
+    .list-token-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .wayra-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .wayra-example {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        img {
+            width: 80%;
+            margin-bottom: 5rem;
+        }
+    }
+
+    .nfts-box {
+        margin: 1rem 5rem 0rem 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: rgba(233, 240, 240, 0.25);
+        padding: 3rem 0rem 3rem 0rem;
+        border-radius: 14px;
+    }
+}
+
+.tokens-title-container, .claim-coupon-explanation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0rem 6rem 0rem 6rem;
+
+    a {
+        text-decoration: none;
+        color: var(--highlight-blue);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 19px;
+        letter-spacing: 0.02em;
+    }
+}
+
+.claim-coupon-explanation {
+    margin-top: 4rem;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+        margin-top: -1rem;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #8B91A1;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .page-container {
+        .home-text-container {
+            text-align: center;
+            button {
+                width: 30%;
+                margin: 3rem 0rem -2rem 0rem;
+            }
+            h2 {
+                margin: 10rem 0rem -3rem 0rem;
+                text-align: center;
+                font-size: 2rem;
+            }
+            span {
+                font-size: 1.5rem;
+            }
+        }
+        .explanation-of-tokens {
+            .sign-responsible-consumer {
+                margin-top: 1.5rem;
+                width: 70%;
+    
+                .button-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    margin: 2.2rem 1rem 0rem 1rem;
+    
+                    a {
+                        width: 20%;
+                        height: 2rem;
+                        font-size: .89rem;
+                    }
+                }
+    
+                h3 {
+                    font-size: 2rem;
+                }
+            }
+    
+            p {
+                margin-top: .5rem;
+                font-size: 1.2rem;
+                line-height: 33px;
+            }
+        }
+        .display-none {
+            display: none;
+        }
+    }
+    .home-background {
+        height: auto;
+    }
+
+    .marketplace-token-container {
+        margin-top: 0rem;
+    }
+
+    .marketplace-token-container {
+        .nfts-box {
+            display: flex;
+            margin: 1rem 1rem 0rem 1rem;
+        }
+
+        .future-products > .nfts-box{
+            flex-direction: column;
+        }
+    }
+
+    .tokens-title-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 5rem 0rem 0rem 0rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .page-container {
+        .home-text-container {
+            h2 {
+                font-size: 2rem;
+            }
+            h4 {
+                margin: 3rem 0rem 0rem 0rem;
+                text-align: center;
+            }
+            span {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .home-background {
+        height: auto;
+    }
+
+    .marketplace-token-container {
+        .tokens-title-container {
+            h2 {
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+    }
+
+    .explanation-of-tokens {
+        .sign-responsible-consumer {
+            margin-top: 1.5rem;
+            width: 50%;
+
+            .button-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 2.2rem 0rem 0rem 0rem;
+
+                a {
+                    width: 20%;
+                    height: 2rem;
+                    font-size: .9rem;
+                }
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            margin-top: .5rem;
+            font-size: 1.2rem;
+            line-height: 33px;
+        }
+    }
+
+    .claim-coupon-explanation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0rem 2rem 0rem 2rem;
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+}
+

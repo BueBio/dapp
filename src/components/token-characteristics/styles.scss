@@ -1,0 +1,41 @@
+.token-characteristics-section {
+    display: flex;
+    flex-direction: column;
+
+    .characteristics-container {
+        display: flex;
+        flex-direction: column;
+
+        .characteristics-img-text {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: -2rem;
+
+            h4 {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #323641;        
+            }
+
+            img {
+                margin-right: .5rem;
+            }
+        }
+
+        .characteristics-title {
+            h3 {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 11px;
+                line-height: 13px;
+                text-transform: uppercase;
+                color: #5A6278;
+            }
+        }
+    }
+}

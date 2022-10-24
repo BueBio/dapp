@@ -1,0 +1,35 @@
+.historial-box {
+    background-color: white;
+    padding: 2rem;
+    margin-top: 3rem;
+        table {
+          width: 100%;
+          border-collapse: collapse;
+
+          .table-section {
+            background-color: #F1F5F5;
+            border-radius: 10px;
+            padding: 1rem;
+            th {
+              color: #8B91A1;
+              padding: 1rem;
+            }
+          }
+
+          .under-table-section {
+            text-align: center;
+            margin-top: 1rem;
+            td {
+              text-align: center;  
+              padding-top:1rem;
+            }
+          }
+
+        }
+    }
+
+    @media (max-width: 992px) {
+      .historial-box {
+        overflow: scroll;
+      }
+    }

@@ -1,0 +1,15 @@
+.transaction-link {
+  a {
+    margin-right: 0 !important;
+
+    img {
+      height:20px;
+      width: 20px;
+      padding-inline:.75rem;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}

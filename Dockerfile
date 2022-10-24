@@ -1,4 +1,4 @@
-FROM node:14.17.0-alpine as builder
+FROM node:16.16.0-alpine as builder
 ARG env_conf
 WORKDIR /app
 COPY package.json /app/package.json

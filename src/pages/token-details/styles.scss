@@ -1,0 +1,608 @@
+.token-description-container {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0rem;
+    height: 50vh;
+
+    .image-description-section, .producer-info-production-description {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0rem 10rem 0rem 17rem;
+
+        .token-image-section {
+            img {
+                width: 640px;
+                border-radius: 16px;
+            }
+
+            h2 {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 13px;
+                text-transform: uppercase;
+                color: #5A6278;
+                margin-top: 2rem;
+            }
+
+            .producer-image-name {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-top: -.3rem;
+                img {
+                    width: 4.2rem;
+                    height: 4.2rem;
+                    border-radius: 50%;
+                    margin-right: 1rem;
+                }
+                .producer-name-description-container {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    background: rgba(233, 240, 240, 0.5);
+                    border-radius: 8px;
+                    padding: .5rem;
+                    box-sizing: border-box;
+                    .producer-name-section {
+                        display: flex;
+                        flex-direction: column;
+                        h4 {
+                            margin-top: -1rem;
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #323641;
+                        }
+
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .producer-info-production-description {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        margin: 0rem 0rem 0rem 17rem;
+    }
+}
+
+.producer-description-section {
+
+    p{
+        max-width: 100%;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13.5px;
+        line-height: 20px;
+        color: #8B91A1;
+    }
+}
+
+.description-productor-information {
+    max-width: 30%;
+}
+
+.token-description-title-section {
+    span {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: #323641;
+    }
+    h2 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 71px;
+        color: #323641;
+        margin: 0rem 0rem -2rem 0rem;
+    }
+
+    p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #323641;
+    }
+}
+
+.token-characteristics-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 55%;
+    align-items: center;
+}
+
+.token-description-section {
+    width: 50%;
+    .historial-box {
+        padding: 0;
+    }
+    .box-temp-border {
+        padding: 2rem 10rem 10rem 20rem;
+        border: 2px solid black;
+        width: 50%;
+    }
+}
+
+.production-description-section {
+    width: 100%;
+}
+
+.price-token-address-section {
+    p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        text-transform: uppercase;
+        color: #5A6278;
+    }
+
+    h3 {
+        margin-top: -.5rem;
+    }
+}
+
+.token-price-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .stock-availabled-section {
+        background: rgba(37, 110, 255, 0.1);
+        padding: 1rem 1.5rem 1rem 1.5rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2 {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #256EFF;
+            margin: 0;
+        }
+
+        p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 2px;
+        color: #256EFF;
+        margin-top: 0;
+        }
+    }
+    h4 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 13px;
+        text-transform: uppercase;
+        color: #5A6278;
+    }
+    h2 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 41px;
+        color: #323641;
+        margin-top: -1rem;
+
+    }
+
+    p {
+        margin-top: -1.5rem;
+    }
+}
+
+.token-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    button {
+        width: 100%;
+    }
+}
+
+.loader-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.description-info {
+    margin-top: 0rem;
+
+    p {
+        max-width: 90%;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13.5px;
+        line-height: 20px;
+        color: #8B91A1;
+    }
+
+    h2 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 13px;
+        text-transform: uppercase;
+        color: #5A6278;
+    }
+}
+
+@media (max-width: 1442px) {
+    .token-description-container{
+        .image-description-section {
+            margin: 0rem 5rem 0rem 10rem;
+
+            .token-image-section {
+                img {
+                    width: 530px;
+                    border-radius: 16px;
+                }
+            }
+        }
+    }
+    .description-productor-information {
+        max-width: 50%;
+    }
+    .producer-description-section {
+        width: 90% ;
+    }
+    .description-info {
+        p{
+            max-width: 90%;
+        }
+    }
+
+    .token-characteristics-container {
+        max-width: 65%;
+    }
+}
+
+@media (max-width: 1700px) {
+    .token-description-container{
+        .token-description-section {
+            margin: 0rem 2rem 0rem 0rem;
+        }
+        .image-description-section {
+            margin: 0rem 0rem 0rem 5rem;
+        }
+        .producer-info-production-description {
+            margin: 0rem 0rem 0rem 12rem;
+        }
+    }
+    .token-characteristics-container {
+        max-width: 65%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .token-description-container{
+        .token-description-section {
+            margin: 0rem 2rem 0rem 0rem;
+        }
+        .image-description-section {
+            margin: 0rem 0rem 0rem 5rem;
+        }
+        .producer-info-production-description {
+            margin: 0rem 0rem 0rem 12rem;
+        }
+    }
+    .token-characteristics-container {
+        max-width: 65%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .token-description-container{
+        text-align: center;
+        .image-description-section {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 100%;
+            margin: 0rem 0rem 0rem 0rem;
+        }
+        .producer-info-production-description {
+            margin: 0rem 0rem 0rem 10rem;
+        }
+
+        .image-description-section, .producer-info-production-description {
+            .token-image-section {
+                img {
+                    width: 560px;
+                    border-radius: 16px;
+                    margin-bottom: 2rem;
+                }
+                .producer-image-name {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: -.3rem;
+                    img {
+                        width: 4.3rem;
+                        margin: 0;
+                        border-radius: 50%;
+                    }
+
+                    .producer-name-description-container {
+                        .producer-name-section {
+                            margin-left: 1rem;
+                            text-align: start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .token-characteristics-container {
+        align-items: flex-start;
+        max-width: 100%;
+        flex-direction: row;
+    }
+
+    .description-info {
+        p {
+            max-width: 100%;
+        }
+    }
+
+    .producer-description-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .token-description-container{
+        text-align: center;
+        .image-description-section {
+            flex-direction: column;
+            margin: 0rem 0rem 0rem 0rem;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+            .token-image-section {
+                img {
+                    width: 550px;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+        .producer-info-production-description {
+            margin: 0;
+            flex-direction: row;
+            align-items: baseline;
+            text-align: center;
+
+
+            .token-image-section {
+                .producer-image-name {
+                    align-items: center;
+                }
+            }
+
+        }
+
+        .image-description-section, .producer-info-production-description {
+            .token-image-section {
+                .producer-image-name {
+                    .producer-name-description-container {
+                        width: 96%;
+                        img {
+                            margin-left: 1rem;
+                        }
+                        .producer-name-section {
+                            margin-left: 1.5rem;
+                        }
+                    }
+                }
+            }}
+
+        .producer-image-name {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: -.3rem;
+            img {
+                width: 4.2rem;
+                height: 4.2rem;
+                border-radius: 50%;
+                margin-right: 1rem;
+            }
+
+        }
+
+    }
+
+    .producer-description-section {
+        width: 97% ;
+    }
+
+    .token-description-section {
+        width: 100%;
+    }
+
+    .token-characteristics-container {
+        max-width: 100%;
+        text-align: start;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .token-price-section {
+        margin: .5rem 8.5rem;
+    }
+
+
+    .description-info {
+        p {
+            max-width: 99%;
+        }
+    }
+
+    .token-button-container {
+        justify-content: center;
+
+        button {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .token-description-container{
+        text-align: center;
+        .image-description-section {
+            flex-direction: column;
+            margin: 0rem 0rem 0rem 0rem;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+            .token-image-section {
+                img {
+                    width: 350px;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+        .producer-info-production-description {
+            margin: 0rem 3rem;
+            flex-direction: column;
+            text-align: start;
+            align-items: baseline;
+        }
+        .description-info {
+            p{
+                max-width: 100%;
+                margin: 0.5rem 0.5rem;
+            }
+        }
+
+        .description-productor-information {
+            max-width: 100%;
+        }
+        .producer-description-section {
+            width: 100% ;
+
+            p {
+                margin: 1rem 0.5rem;
+            }
+        }
+        .image-description-section, .producer-info-production-description {
+            .token-image-section {
+                img {
+                    width: 350px;
+                    border-radius: 16px;
+                }
+                .producer-image-name {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: start;
+                    align-items: flex-start;
+                    margin-top: -.3rem;
+                    img {
+                        width: 4rem;
+                        height: 4rem;
+                        margin: 0;
+                        border-radius: 50%;
+                    }
+
+                    .producer-name-description-container {
+                        width: 95%;
+                        .producer-name-section {
+                            margin-left: .6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+        .production-description-section {
+            width: 98%;
+        }
+
+    .token-characteristics-container {
+        max-width: 100%;
+        text-align: start;
+        flex-direction: row;
+        margin-top: 1rem;
+        justify-content: space-around;
+    }
+    .token-price-section {
+        margin: .5rem 1rem;
+    }
+
+    .token-button-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 282px) {
+    .token-description-container {
+        .image-description-section {
+            .token-image-section {
+                img {
+                    width: 250px;
+                }
+                .producer-image-name {
+                    .producer-name-description-container {
+                        width: 92%;
+                    }
+                }
+            }
+        }
+    }
+
+    .token-characteristics-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .token-price-section {
+        flex-direction: column;
+    }
+
+    .description-info{
+       p {
+        text-align: center;
+       }
+    }
+}

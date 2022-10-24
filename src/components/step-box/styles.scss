@@ -1,0 +1,49 @@
+.section-container {
+    display: flex;
+    flex-direction: column;
+.input-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    justify-content: flex-start;
+    
+    h4 {
+        color: grey;
+    }
+
+    .done {
+        color: blue;
+        opacity: .5;
+    }
+
+    .finished {
+        color: grey;
+    }
+
+    .active {
+        color: blue;
+    }
+  }
+}
+
+.step-image-h4 {
+    display: flex;
+    flex-direction: row;
+
+    h4 {
+        margin-left: .5rem;
+    }
+}
+
+.btn-container {
+    a {
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-container {
+        margin-bottom: 3rem;
+    }
+}

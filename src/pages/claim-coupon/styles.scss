@@ -1,0 +1,207 @@
+.reclaim-coupon-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 5rem 5rem;
+  flex-direction: row;
+}
+.text-explanation-claim-coupon {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0rem 4rem;
+    max-width: 30%;
+
+    h2 {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 71px;
+    }
+
+    p {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: #8B91A1;
+    }
+}
+
+.step-box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background: rgba(233, 240, 240, 0.5);
+  border-radius: 14px;
+  padding: 10rem;
+  width: 90%;
+
+  h2 {
+    font-size: 34px;
+    margin: -4rem 0rem 4rem 0rem;
+  }
+
+  .section-container {
+    display: flex;
+    flex-direction: column;
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    align-items: center;
+    .title-input {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        width: 100%;
+      }
+      p {
+        color: red;
+        font-size: .8rem;
+      }
+    }
+    button {
+        align-items: center;
+        margin-top: 5rem;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+    }
+  }
+}
+}
+
+.verification-container {
+  margin-top: -3rem;
+}
+
+.confirm-code-wallet {
+  margin-top: 5rem;
+  h4 {
+    font-family: 'Inter';
+    font-size: normal;
+    font-weight: 600;
+    font-size: 21.5px;
+    color: #323641;
+    text-align: start;
+    margin-bottom: -1rem;
+  }
+
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .data-container{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+  
+      h5, p {
+        font-family: 'Inter';
+        font-size: normal;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 18px;
+        color: #8B91A1;
+        margin-bottom: -.5rem;
+      }
+  
+      #wallet-id {
+        font-family: 'Inter';
+        font-size: normal;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 18px;
+        color: #8B91A1;
+
+        width: 180px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+      }
+    }
+  }
+
+}
+
+.btn-container {
+  margin-top: 4rem;
+  button {
+    width: 50%;
+  }
+}
+
+.verification-completed-container {
+  margin-top: 2.5rem;
+  img {
+    width: 70px;
+  }
+
+  h3 {
+    font-family: 'Inter';
+    font-size: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #323641;
+  }
+}
+
+@media (max-width: 1025px) {
+  .step-box {
+    width: 100%;
+    padding: 15rem 0rem;
+  }
+}
+
+@media (max-width: 992px) {
+    .reclaim-coupon-container {
+      flex-direction: column;
+      margin: 0;
+      text-align: center;
+    }
+    
+    .text-explanation-claim-coupon {
+      max-width: 100%;
+
+      h2 {
+        line-height: 45px;
+      }
+    }
+
+    .step-box {
+      width: 100%;
+      padding: 10rem 0rem;
+    }
+
+    .confirm-code-wallet {
+      h4 {
+        text-align: center;
+      }
+      .description-container {
+        .data-container {
+          flex-direction: column;
+
+          h5 {
+            color: rgb(87, 87, 87);
+          }
+          #wallet-id {
+            font-size: .9rem;
+          }
+        }
+      }
+    }
+}

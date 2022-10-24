@@ -1,0 +1,22 @@
+
+
+@keyframes buttonHover {
+    from{
+        stroke-dasharray: 7500;
+    }
+    to{
+        stroke-dasharray: 2000;
+        stroke: #f7302d;
+    }
+}
+
+@keyframes buttonHoverFadeOut {
+    from{
+        stroke-dasharray: 2000;
+        stroke: #f7302d;
+        
+    }
+    to{
+        stroke-dasharray: 7500;
+    }
+}

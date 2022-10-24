@@ -1,0 +1,247 @@
+.main-marketplace-container {
+
+    h1 {
+        margin: 0;
+    }
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 99vw;
+
+    .marketplace-tokens-container {
+        margin-top: 2vw;
+        width: 95%;
+
+        &>.filters-tokens-container {
+            margin-bottom: 3rem;
+            padding: 2rem 0rem;
+            background-color: #E9F0F080;
+            border-radius: 1rem;
+        }
+
+        .marketplace-tokens-title {
+            height: 10%;
+            padding: 5rem 0 1rem 0;
+            margin-left: 3.5rem;
+        }
+
+        .marketplace-tokens-filters {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-inline: 3rem;
+
+            &>div,
+            &>div>button>span {
+                font-family: 'montserrat', 'sans-serif';
+                transition: transform 1s ease-out;
+                position: relative;
+                font-size: 1rem;
+                color: #5A6278;
+                transition: color .15s ease-out;
+                font-weight: bold;
+            }
+
+            .primary-filters {
+                width: 70%;
+                height: 2rem;
+                border-bottom: 2px solid #DDD;
+            }
+
+            .primary-filters>div {
+                display: flex;
+                height: 100%;
+                width: 35%;
+                justify-content: space-between;
+            }
+
+            .primary-filters>div>button {
+                border: none;
+                position: relative;
+                outline: none;
+                background-color: transparent;
+            }
+
+            .primary-filters>div>button>span {
+                font: 1rem var(--font);
+            }
+
+            .primary-filters>div>button>span:hover {
+                cursor: pointer;
+            }
+
+            .primary-filters>div>button>.active {
+                color: var(--highlight-blue);
+                font-weight: 700;
+            }
+
+            .primary-filters>div>button>.active::after {
+                content: '';
+                animation: bottomBorder .15s ease-out;
+                transform-origin: left;
+                right: 0;
+                display: block;
+                position: absolute;
+                height: 4px;
+                margin-top: .25rem;
+                width: 100%;
+                background-color: var(--highlight-blue);
+            }
+
+            &>.secondary-filters {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 25%;
+
+                &>div:first-child {
+                    width: 80%;
+                }
+
+                &>div {
+                    display: flex;
+                    cursor: pointer;
+
+                    &>span {
+                        font-weight: 500;
+                    }
+
+                    & img[alt="filters"] {
+                        margin-inline: 2rem;
+                    }
+
+                    & .search-icon-container {
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        pointer-events: none;
+
+                        &>img {
+                            margin-left: 10px;
+                            height: 20px;
+                            width: 20px;
+                        }
+                    }
+                }
+
+
+                & .filters-icon-container {
+                    background-color: #FFF;
+                    padding: .75rem 1rem;
+                    border-radius: 1rem;
+                }
+
+
+                &>div>input[type="text"] {
+                    padding-left: 2.5rem;
+                    min-width: 70%;
+                    position: relative;
+                    margin-right: 4vw;
+
+                    &::placeholder {
+                        font-family: var(--font);
+                        font-size: .8rem;
+                    }
+                }
+
+                &>div>input[type="text"]:focus {
+                    border: none;
+                    outline: 1px solid #AAA;
+                }
+            }
+        }
+
+        .marketplace-tokens {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            padding: .5rem;
+
+            &>.nft-box-container {
+                width: 80%;
+                justify-self: center;
+                border-radius: 8px;
+                overflow: hidden;
+
+            }
+        }
+    }
+
+}
+
+@keyframes bottomBorder {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .main-marketplace-container {
+        width: 98vw;
+    }
+
+    .marketplace-tokens-title {
+        margin-left: 0 !important;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .marketplace-tokens {
+        padding: 0 !important;
+        justify-content: center;
+
+        &>.primary-filters span {
+            font-size: .8rem;
+
+            button {
+                margin-bottom: 1rem !important;
+            }
+        }
+    }
+
+    .marketplace-tokens-filters {
+
+        flex-direction: column;
+        align-items: flex-start !important;
+        margin-inline-start: 1rem !important;
+        margin-top: 2rem;
+        width: 95%;
+
+        .primary-filters {
+            border-bottom: none !important;
+            width: 100% !important;
+
+            &>div {
+                width: 100% !important;
+            }
+        }
+    }
+
+    .secondary-filters {
+        width: 100% !important;
+        margin-top: 1rem;
+
+        &>div {
+            align-items: center;
+        }
+
+        & svg {
+            height: 40px;
+            width: 40px;
+        }
+
+        & input[type="text"] {
+            height: 2vh;
+            min-width: 0 !important;
+            width: 100%;
+        }
+    }
+}

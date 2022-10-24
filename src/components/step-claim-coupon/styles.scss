@@ -1,0 +1,100 @@
+.claim-coupon-step-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 7rem 8rem;
+
+    .claim-coupon-explanation{
+        align-items: flex-start;
+        .button-with-text-container {
+            display: flex;
+            flex-direction: column;
+        }
+        h6 {
+            margin-top: 1rem;
+            margin-bottom: -.5rem;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #8B91A1;
+        }
+        a {
+            color: white;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .explanation-container {
+        display: flex;
+        flex-direction: column;
+
+        .explanation-with-images-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: rgba(233, 240, 240, 0.5);
+            border-radius: 14px;
+            padding: 1.5rem;
+            margin: 1rem 5rem 0rem 5rem;
+            .explanation-image {
+                padding: 1rem;
+                background: #FFFFFF;
+                box-shadow: 20px 20px 30px rgba(13, 33, 49, 0.05);
+                border-radius: 14px;
+            }
+            h3 {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                color: #323641;
+                margin-left: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1450px) {
+    .claim-coupon-step-container {
+        margin: 7rem 2rem;
+    }
+}
+
+
+@media (max-width: 1050px) {
+    .claim-coupon-step-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 7rem 0rem;
+
+        .claim-coupon-explanation {
+            justify-content: center;
+            margin: 0rem;
+            align-items: center;
+        }
+
+        .explanation-container {
+            margin-top: 4rem;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .claim-coupon-step-container {
+        margin: 7rem 2rem;
+
+        .explanation-container {
+            .explanation-with-images-container {
+                margin: 1rem 0rem;
+            }
+        }
+    }
+}
+

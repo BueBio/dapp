@@ -4,41 +4,23 @@ import {
   providers,
   utils,
 } from 'ethers';
-import erc20 from './erc20-abi.json';
+import erc20Abi from './erc20-abi.json';
 
-export function transfer(toAddress, tokenAddress, provider, quantity, decimals) {
+const BUEBIO_FUTURE_ADDRESS = process.env.REACT_APP_CONTRACT_BUEBIO_FUTURE_ADDRESS;
+
+export function approve(tokenAddress, amount, decimals, provider) {
   const providerContract = new providers.Web3Provider(provider);
   const signer = providerContract.getSigner();
-  const contract = new Contract(tokenAddress, erc20, signer);
-  const bigNumber = BigNumber.from(quantity).mul(10).pow(decimals);
-  return contract.transfer(toAddress, bigNumber.toHexString())
-    .then((transaction) => {
-      return transaction.hash;
-    });
+  const contract = new Contract(tokenAddress, erc20Abi, signer);
+  const bigNumber = BigNumber.from(`${amount * (10 ** decimals)}`);
+  return contract.approve(BUEBIO_FUTURE_ADDRESS, bigNumber.toHexString());
 }
 
-export function getBalanceWallet(walletAddress, coinAddress, provider) {
+export function allowance(walletAddress, tokenAddress, provider) {
   const providerContract = new providers.Web3Provider(provider);
-  const contract = new Contract(coinAddress, erc20, providerContract);
-  return contract.balanceOf(walletAddress)
+  const contract = new Contract(tokenAddress, erc20Abi, providerContract);
+  return contract.allowance(walletAddress, BUEBIO_FUTURE_ADDRESS)
     .then((balance) => {
       return utils.formatEther(balance);
-    });
-}
-
-export function getInfoToken(coinAddress, provider) {
-  const providerContract = new providers.Web3Provider(provider);
-  const contract = new Contract(coinAddress, erc20, providerContract);
-  return Promise.all([
-    contract.symbol(),
-    contract.name(),
-    contract.decimals(),
-  ])
-    .then((data) => {
-      return {
-        symbol: data[0],
-        name: data[1],
-        decimals: data[2],
-      };
     });
 }

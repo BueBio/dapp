@@ -1,0 +1,217 @@
+.future-production-box-container {
+    display: flex;
+    flex-direction: row;
+    border-radius: 14px;
+    box-shadow: 20px 20px 30px rgba(13, 33, 49, 0.05);
+    width: 25%;
+    margin: .5rem;
+
+    .future-production-img-container {
+        width: 60%;
+        background-image: url(../../assets/honey.svg);
+        background-repeat: no-repeat;
+        border-radius: 14px 0px 0px 14px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .color-line-impact {
+        height: 10px;
+        background-color: #00D280;
+    }
+    .color-line-future {
+        height: 10px;
+        background-color: #7F96FF;
+    }
+    .title-text-token {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0rem 0rem 0rem 2rem;
+
+        h2 {
+            margin-top: 2rem;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+            color: #323641;
+        }
+
+        p {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #8B91A1;
+            margin-top: -.3rem;
+        }
+
+        .token-name {
+            display: flex;
+            justify-content: flex-end;
+    
+            .h2-impact {
+                padding: 0rem 2rem 0rem 2rem;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                color: #00D280;
+            }
+            .h2-future {
+                padding: 0rem 2rem 0rem 2rem;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                color: #7F96FF;
+            }
+        }
+    }
+    .timer-price-token {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        h4 {
+            padding: 0rem 2rem 0rem 0rem;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #5A6278;
+        }
+    }
+    .buttons-container-token {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        .btn-gral {
+            width: 100%;
+        }
+
+        .connect-metamask-button {
+            width: 80%;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .favorite-button {
+            background: none;
+            border: 1.8px solid #8b91a1;
+            border-radius: 8px;
+            padding: 1rem;
+            cursor: pointer;
+            margin-right: 2rem;
+        }
+        .favorite-button:hover {
+            border: 1.8px solid #F25F5C;
+
+            img {
+                filter: var(--filter-red);
+            }
+        }
+    }
+
+}
+
+.token-status-tag {
+    margin-bottom: -2rem;
+    h4 {
+      float: right;
+      margin-right: 2rem;
+      padding: .5rem;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      border-radius: 8px;
+    }
+}
+
+.expired {
+    h4 {
+      color: #F25F5C;
+      background: rgba(#F25F5C, .1);
+    }
+}
+
+.selled {
+    h4 {
+      color: #00D280;
+      background: rgba(#00D280, .1);
+    }
+}
+
+.error-msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activeBid {
+    h4 {
+      color: #7F96FF;
+      background: rgba(#7F96FF, .1);
+    }
+}
+
+.timer-price-token {
+
+    .label-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+
+        h3 {
+          margin-right: .7rem;
+          font-size: .8rem;
+        }
+    }
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1440px) {
+    .future-production-box-container {
+        width: 45%;
+        margin-top: 1rem;
+        height: 14rem;
+
+        .buttons-container-token{
+            .btn-gral {
+                width: auto;
+            }
+            .favorite-button {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .display-none {
+       display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .future-production-box-container {
+        width: auto;
+
+    }
+
+}

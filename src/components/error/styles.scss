@@ -1,0 +1,39 @@
+.error-msg-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+    img {
+        width: 250px;
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 71px;
+        color: #323641;
+    }
+
+    .btn-gral {
+        text-decoration: none;  
+    }
+}
+
+@media (max-width: 992px) {
+    .error-msg-container{
+        img {
+            width: 200px;
+        }
+
+        h2 {
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+        }
+    }
+}

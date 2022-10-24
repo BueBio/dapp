@@ -1,0 +1,199 @@
+.new-item-container {
+
+    p, span, button{
+        font-family: 'Inter';
+    }
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+    .img-container {
+        border-radius: 1rem;
+        height: 90%;
+        width: 700px;
+        overflow: hidden;
+
+        &>img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .item-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: flex-end;
+        padding-inline: 6rem;
+        height: 95%;
+        width: 40%;
+
+        &>div {
+            &>h1 {
+                font-family: 'Inter';
+                font-size: 2.5rem;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                margin: 0;
+            }
+
+            p {
+                width: 85%;
+            }
+
+            &>.item-description {
+                margin-top: 4rem;
+
+                h2 {
+                    font-weight: bolder;
+                    font-family: 'Inter';
+                    letter-spacing: .05rem;
+                }
+
+                p {
+                    color: #888;
+                }
+            }
+        }
+
+        &>.price-and-publish-btn {
+            height: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            & .buy-cancel-buttons-container {
+                display: flex;
+                justify-content: space-between;
+
+                &>button {
+                    width: 48%;
+                }
+
+                &>button:first-child {
+                    background-color: #ACB0BB;
+                }
+            }
+
+            &>button {
+                width: 50%;
+            }
+        }
+
+        &>.item-price-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: #EEF2F2;
+            border-radius: 1rem;
+            height: 25%;
+            padding: 2rem;
+
+            & span {
+                text-transform: uppercase;
+                font-size: .8rem;
+                color:#999;
+            }
+
+            & input:focus {
+                border: none;
+                outline: none;
+            }
+
+            & input {
+                width: 95%;
+                -moz-appearance: textfield;
+
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+
+            & select {
+                width: 100%;
+                border: none;
+                border-radius: 1rem;
+
+                &:focus{
+                    border: none;
+                    outline: none;
+                }
+
+                & option{
+                    padding-block: 1rem;
+                }
+            }
+
+            & select,
+            & input {
+                padding-block: 1rem;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                padding-inline: 2.5%;
+                font-family: 'Inter';
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .new-item-container{
+        flex-direction: column;
+        height: auto;
+        padding-block: 1rem;
+
+        .img-container{
+            height: 500px;
+            width: 100%;
+        }
+
+        .item-details{
+            width:80%;
+            align-self: center;
+            justify-self: center;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 0;
+
+            & > div > h1, & > div > h2, & > div > p{
+                text-align: center;
+            }
+
+            & > div > h1{
+                font-size: 2.3rem;
+            }
+
+            & > div p{
+                width: auto;
+            }
+
+            .item-price-container{
+                margin-bottom: 1rem;
+
+                & > span{
+                    margin-block: 1rem;
+                }
+            }
+
+            .item-price-container, .price-and-publish-btn{
+                width: 100%;
+            }
+        }
+
+        .item-description{
+            text-align: center;
+        }
+
+        .buy-cancel-buttons-container{
+            flex-direction: column;
+
+            &>button{
+                width: 100% !important;
+                margin-top: 1rem;
+            }
+        }
+    }
+}

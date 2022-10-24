@@ -5,8 +5,6 @@ const ContextRLogin = React.createContext();
 
 function rloginReducer(state, action) {
   switch (action.type) {
-    case 'setRLogin':
-      return { ...state, rlogin: action.value };
     case 'setDataGeneral':
       return {
         ...state,
@@ -15,12 +13,6 @@ function rloginReducer(state, action) {
         provider: action.value.provider,
         networkId: action.value.networkId,
       };
-    case 'setDisconnect':
-      return { ...state, disconnect: action.value };
-    case 'setAddressUser':
-      return { ...state, address: action.value };
-    case 'setProvider':
-      return { ...state, provider: action.value };
     default:
       throw new Error(`Unexpected action ${action.type}`);
   }

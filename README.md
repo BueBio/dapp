@@ -1,4 +1,4 @@
-# NFTV - Dapp
+# web
 
 ## Requirements
 - Node >= 12

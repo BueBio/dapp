@@ -1,0 +1,94 @@
+.main-status-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    &>div {
+        height: 65%;
+    }
+
+    h1 {
+        font-family: 'Inter';
+        font-weight: 700;
+        color: #323641;
+        letter-spacing: .05rem;
+    }
+
+    .status-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        padding: 4rem 10rem;
+        border-radius: 8px;
+        margin-top: 3rem;
+    }
+
+    .status-container span {
+        font-size: 1.2rem;
+        width: 70%;
+    }
+
+    .status-container.SUCCESS {
+        background: #256EFF1A;
+    }
+
+    .status-container.REJECTED {
+        background: #F25F5C1A;
+    }
+
+    .button-container {
+        display: flex;
+        margin-top: 4rem;
+        width: calc(50% + 20rem);
+
+        button {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .back {
+            margin-right: .5rem;
+            background-color: #ACB0BB;
+            border: none;
+        }
+
+        .retry {
+            margin-left: .5rem;
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .main-status-container{
+        width: 100vw;
+
+        &>div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .status-container{
+            flex-direction: column;
+            padding:0;
+            padding-block: 2rem;
+            width: 90%;
+
+            span{
+                text-align: center;
+            }
+        }
+
+        .button-container{
+            flex-direction: column;
+            align-items: center;
+            width:80%;
+
+            button{
+                margin: .5rem 0 !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.label-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    h3 {
+      margin-right: 1.5rem;
+      font-size: .95rem;
+    }
+}

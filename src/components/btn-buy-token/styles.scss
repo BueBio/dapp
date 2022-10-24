@@ -1,0 +1,34 @@
+.btn-loader {
+  padding: 0;
+  height: 50px;
+}
+
+.buy-message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 80%;
+  box-sizing: border-box;
+  margin-top: 1rem;
+  padding: 0.3rem;
+
+  img {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+  }
+
+  p {
+    font-size: 0.65rem;
+  }
+
+}
+
+.buy-error {
+  background-color: rgba(242, 95, 92, 0.1);
+}
+
+.buy-successfully {
+  background-color: rgba(37, 110, 255, 0.1);
+}
