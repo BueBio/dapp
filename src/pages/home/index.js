@@ -47,9 +47,9 @@ export default function Home() {
         <div className="list-token-container">
           <div className="nfts-box">
             <FutureProduct />
-            <FutureProductSoon title="Vino Malbec" />
-            <FutureProductSoon title="Leña Sustentable" />
-            <FutureProductSoon title="Handwoven Poncho" />
+            <FutureProductSoon title="Fibras y Tintes Naturales" />
+            <FutureProductSoon title="Ganadería regenerativa" />
+            <FutureProductSoon title="Harina de Algarroba" />
           </div>
         </div>
         <StepClaimCoupon />
